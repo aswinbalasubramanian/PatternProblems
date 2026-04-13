@@ -9,7 +9,8 @@ class Codechef
 		int n = sc.nextInt();
 		for(int i = 1; i <= n; i++){
 		    int input = sc.nextInt();
-		    print18(input);
+		    print19A(input);
+			print19B(input);
 		}
         sc.close();
 	}
@@ -63,5 +64,37 @@ class Codechef
 	        System.out.println();
 	    }
 	    
+	}
+
+	//19A,19B - first approach - to be optimised
+	static void print19A( int n ){
+	    for( int i = 1; i <= n/2; i++ ){
+	        
+	        for( int j = i; j <= n/2; j++ ){
+	            System.out.print("*");
+	        }
+	        for( int j = 1; j < i; j++){
+	            System.out.print("  ");
+	        }
+			for( int j = i; j <= n/2; j++ ){
+	            System.out.print("*");
+	        }
+	        System.out.println();
+	    }
+	}
+
+	static void print19B( int n ){
+	    for( int i = 1; i <= n/2; i++ ){    
+	        for( int j = 1; j <= i; j++ ){
+	            System.out.print("*");
+	        }
+	        for( int j = 1; j <= n -(2*i); j++){
+	            System.out.print(" ");
+	        }
+			for( int j = 1; j <= i; j++ ){
+	            System.out.print("*");
+	        }
+	        System.out.println();
+	    }
 	}
 }
