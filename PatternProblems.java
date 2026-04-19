@@ -97,4 +97,8 @@ class Codechef
 	        System.out.println();
 	    }
 	}
+
+	static void print20( int n ){
+		
+	}
 }
